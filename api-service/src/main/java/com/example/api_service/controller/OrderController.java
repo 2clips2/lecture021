@@ -25,7 +25,6 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class OrderController {
     private final OrderService orderService;
-    String bar = "ss";
     @GetMapping("/orders/user-orders/{userId}")
     public ResponseEntity<List<OrderDto>> getUserOrders(@PathVariable("userId") String userId) {
         return ResponseEntity.ok(orderService.getUserOrders(userId));
